@@ -39,6 +39,18 @@ extension MainViewController: UICollectionViewDataSource {
         return cell
         
     }
-    
-    
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
+            // 다운캐스팅 실패하면 셀에 표시 안됨
+            return .zero
+        }
+        
+        let width = Int((collectionView.bounds.width - (flowLayout.minimumInteritemSpacing + flowLayout.sectionInset.left + flowLayout.sectionInset.right)) / 2)
+        
+        return CGSize(width: width, height: width)
+    }
 }

@@ -21,26 +21,26 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-kj-c3D">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="THd-aA-Jnw">
-                                    <size key="itemSize" width="390" height="380"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="THd-aA-Jnw">
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="W3c-Xb-OWK" customClass="PlanetCollectionViewCell" customModule="PlanetPedia" customModuleProvider="target">
-                                        <rect key="frame" x="1.6666666666666667" y="0.0" width="390" height="380"/>
+                                        <rect key="frame" x="30" y="30" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q3m-rD-UJQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars-icon" translatesAutoresizingMaskIntoConstraints="NO" id="9ZO-7y-1q8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaH-E5-RKT">
-                                                    <rect key="frame" x="140.66666666666666" y="166" width="109" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                                    <rect key="frame" x="33.999999999999993" y="57" width="82.333333333333314" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -54,7 +54,7 @@
                                                 <constraint firstItem="9ZO-7y-1q8" firstAttribute="leading" secondItem="Q3m-rD-UJQ" secondAttribute="leading" id="w14-y7-Lwu"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="390" height="380"/>
+                                        <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="planetImageView" destination="9ZO-7y-1q8" id="8AR-0t-ZvR"/>
                                             <outlet property="planetNameLabel" destination="OaH-E5-RKT" id="QMO-b8-6lb"/>
