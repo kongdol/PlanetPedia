@@ -58,6 +58,7 @@
                                         <connections>
                                             <outlet property="planetImageView" destination="9ZO-7y-1q8" id="8AR-0t-ZvR"/>
                                             <outlet property="planetNameLabel" destination="OaH-E5-RKT" id="QMO-b8-6lb"/>
+                                            <segue destination="oZX-Re-dSe" kind="show" id="PDJ-DH-kLW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -83,7 +84,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="862" y="-27"/>
+        </scene>
+        <!--Planet Detail View Controller-->
+        <scene sceneID="Zfa-7h-HeO">
+            <objects>
+                <viewController id="oZX-Re-dSe" customClass="PlanetDetailViewController" customModule="PlanetPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TeZ-Iy-8tB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mars" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-xO-pl4">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6cC-wN-5B3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NRg-FW-fNW"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="KjU-xO-pl4" id="C25-JV-Oyk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpW-eb-b43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623.6641221374045" y="-27.464788732394368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HN8-yk-Uwt">
@@ -105,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mars" width="960" height="720"/>
         <image name="mars-icon" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
