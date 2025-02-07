@@ -11,15 +11,27 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var planetCollectionView: UICollectionView!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as? UICollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell){
-            let selected = solarSystemPlanets[indexPath.item]
-            
-            if let vc = segue.destination as? PlanetDetailViewController {
-                vc.planet = selected
-            }
+    // 생성자 주입
+    @IBSegueAction func makeDetailVC(_ coder: NSCoder, sender: Any?) -> PlanetDetailViewController? {
+        guard let cell = sender as? UICollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell) else {
+            return nil
         }
+        let selected = solarSystemPlanets[indexPath.item]
+        
+        return PlanetDetailViewController(planet: selected, coder: coder)
     }
+    
+    
+    // DI 속성주입
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let cell = sender as? UICollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell){
+//            let selected = solarSystemPlanets[indexPath.item]
+//            
+//            if let vc = segue.destination as? PlanetDetailViewController {
+//                vc.planet = selected
+//            }
+//        }
+//    }
     
     
     
