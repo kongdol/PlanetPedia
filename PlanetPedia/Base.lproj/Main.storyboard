@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N4m-Gj-2AL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PlanetPedia-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PlanetPedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-kj-c3D">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="THd-aA-Jnw">
+                                    <size key="itemSize" width="390" height="380"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="W3c-Xb-OWK" customClass="PlanetCollectionViewCell" customModule="PlanetPedia" customModuleProvider="target">
+                                        <rect key="frame" x="1.6666666666666667" y="0.0" width="390" height="380"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q3m-rD-UJQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars-icon" translatesAutoresizingMaskIntoConstraints="NO" id="9ZO-7y-1q8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaH-E5-RKT">
+                                                    <rect key="frame" x="140.66666666666666" y="166" width="109" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9ZO-7y-1q8" firstAttribute="top" secondItem="Q3m-rD-UJQ" secondAttribute="top" id="Ayh-7d-RFS"/>
+                                                <constraint firstAttribute="bottom" secondItem="9ZO-7y-1q8" secondAttribute="bottom" id="IDy-kF-0ok"/>
+                                                <constraint firstItem="OaH-E5-RKT" firstAttribute="centerX" secondItem="Q3m-rD-UJQ" secondAttribute="centerX" id="Ze5-46-5Gh"/>
+                                                <constraint firstItem="OaH-E5-RKT" firstAttribute="centerY" secondItem="Q3m-rD-UJQ" secondAttribute="centerY" id="aQi-ju-vQb"/>
+                                                <constraint firstAttribute="trailing" secondItem="9ZO-7y-1q8" secondAttribute="trailing" id="mJC-rN-36Z"/>
+                                                <constraint firstItem="9ZO-7y-1q8" firstAttribute="leading" secondItem="Q3m-rD-UJQ" secondAttribute="leading" id="w14-y7-Lwu"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="390" height="380"/>
+                                        <connections>
+                                            <outlet property="planetImageView" destination="9ZO-7y-1q8" id="8AR-0t-ZvR"/>
+                                            <outlet property="planetNameLabel" destination="OaH-E5-RKT" id="QMO-b8-6lb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Y34-DY-zpE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="K6M-E3-Oob"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zdj-kj-c3D" secondAttribute="bottom" id="8ZK-Fp-956"/>
+                            <constraint firstItem="Zdj-kj-c3D" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JUk-Nz-EvQ"/>
+                            <constraint firstItem="Zdj-kj-c3D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UTf-cd-oyM"/>
+                            <constraint firstItem="Zdj-kj-c3D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lVJ-VG-2vV"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="PlanetPedia" id="WnM-gr-lVL"/>
+                    <connections>
+                        <outlet property="planetCollectionView" destination="Zdj-kj-c3D" id="lop-Bx-E8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HN8-yk-Uwt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N4m-Gj-2AL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="eY4-gC-6sy">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oiX-8Y-Mig"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16L-Ef-AkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mars-icon" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
