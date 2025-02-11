@@ -7,10 +7,8 @@
 
 import UIKit
 
-class SatelliteCollectionViewCell: UICollectionViewCell {
+class SatelliteCollectionViewCell: RoundedCollectionViewCell {
     
     @IBOutlet weak var sateliteNameLabel: UILabel!
-    
     @IBOutlet weak var sateliteSummaryLabel: UILabel!
-    
 }
