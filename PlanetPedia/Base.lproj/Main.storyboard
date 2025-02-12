@@ -94,10 +94,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mars" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-xO-pl4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mars" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-xO-pl4">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jz8-0T-vjk">
+                                <rect key="frame" x="76" y="362" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MRH-EM-kin">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -288,15 +291,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MRH-EM-kin" firstAttribute="top" secondItem="TeZ-Iy-8tB" secondAttribute="top" id="Dqh-W9-P86"/>
+                            <constraint firstItem="Jz8-0T-vjk" firstAttribute="top" secondItem="KjU-xO-pl4" secondAttribute="top" id="Fqg-kT-Jkm"/>
+                            <constraint firstItem="Jz8-0T-vjk" firstAttribute="bottom" secondItem="KjU-xO-pl4" secondAttribute="bottom" id="NW6-Uy-Oqc"/>
+                            <constraint firstItem="KjU-xO-pl4" firstAttribute="centerX" secondItem="TeZ-Iy-8tB" secondAttribute="centerX" id="O6n-JY-taP"/>
+                            <constraint firstItem="Jz8-0T-vjk" firstAttribute="leading" secondItem="KjU-xO-pl4" secondAttribute="leading" id="S22-d6-ToG"/>
                             <constraint firstItem="MRH-EM-kin" firstAttribute="leading" secondItem="6cC-wN-5B3" secondAttribute="leading" id="Spm-Nc-Rg3"/>
+                            <constraint firstItem="Jz8-0T-vjk" firstAttribute="trailing" secondItem="KjU-xO-pl4" secondAttribute="trailing" id="cdG-n0-xvX"/>
                             <constraint firstItem="MRH-EM-kin" firstAttribute="trailing" secondItem="6cC-wN-5B3" secondAttribute="trailing" id="gk1-a6-D3H"/>
                             <constraint firstAttribute="bottom" secondItem="MRH-EM-kin" secondAttribute="bottom" id="q9n-xZ-yDt"/>
+                            <constraint firstItem="KjU-xO-pl4" firstAttribute="centerY" secondItem="TeZ-Iy-8tB" secondAttribute="centerY" id="yAC-zu-7Yl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NRg-FW-fNW"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="KjU-xO-pl4" id="C25-JV-Oyk"/>
                         <outlet property="detailCollectionView" destination="MRH-EM-kin" id="yxi-De-C2l"/>
+                        <outlet property="dimView" destination="Jz8-0T-vjk" id="vs3-r1-1T1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpW-eb-b43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
